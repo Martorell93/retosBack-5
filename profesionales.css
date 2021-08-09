@@ -4,4 +4,29 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    background-color: #868B8E;
+}
+
+#todo {
+    margin-top: 50px;
+}
+
+input, label {
+    width: 100px;
+    padding: 10px;
+}
+
+#datos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    justify-items: center;
+}
+
+#botones {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    width: 90%;
 }

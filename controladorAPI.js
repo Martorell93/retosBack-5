@@ -132,14 +132,14 @@ async function putPro() {
             headers: {
                 "Content-type": "application/json; charset= UTF-8"
             },
-            body: {
-                "name" : nuevoNombre,
-                "age" : nuevoEdad,
-                "genre": nuevoGenero,
-                "nationality" : nuevoNation,
-                "profession" : nuevoPro,
-                "posicion" : id
-            },
+            body: 
+                JSON.stringify({name : nuevoNombre,
+                age : nuevoEdad,
+                genre: nuevoGenero,
+                nationality : nuevoNation,
+                profession : nuevoPro,
+                posicion : id})
+            ,
             method: "PUT"
         }
         let data = await fetch(url, param);
@@ -156,18 +156,17 @@ async function putPro() {
 //Método DELETE
 async function deletePro() {
     let id = document.getElementById("id").value;
+    let body1 = {posicion: id};
     try
     {
         let url ="http://localhost:4000/profesionales";
-        let param = {
-            headers: {
-                "Content-type": "application/json; charset= UTF-8"
-            },
-            body: {
-                "posicion" : id
-            },
+        let param =
+        {
+            headers: {"Content-type": "application/json; chasert= UTF-8"},
+            body: JSON.stringify(body1),
             method: "DELETE"
         }
+        console.log(JSON.stringify(body1))
         let data = await fetch(url, param);
         let result = await data.json();
 

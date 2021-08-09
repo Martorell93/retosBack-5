@@ -13,29 +13,33 @@
 </head>
 <body>
     <main>
-        <section>
+        <section id = "todo">
             <form>
-                <label for="name">Nombre: </label>
-                <input type="text" id="name">
-                <label for="age">Edad: </label>
-                <input type="text" id="age">
-                <label for="genre">Genero: </label>
-                <input type="text" id="genre">
-                <label for="nationality">Nacionalidad: </label>
-                <input type="text" id="nationality">
-                <label for="profession">Profesión: </label>
-                <input type="text" id="profession">
-                <label for="id">Id: </label>
-                <input type="text" id="id">
-                <button type="button" onclick="getPro()">Mostar</button>
-                <button type="button" onclick="postPro()">Crear</button>
-                <button type="button" onclick="putPro()">Actualizar</button>
-                <button type="button" onclick="deletePro()">Eliminar</button>
+                <div class= "shadow-sm p-3 mb-5 bg-body rounded" id="datos">
+                    <label class= "shadow-lg p-3 mb-5 bg-body rounded" for="name">Nombre: </label>
+                    <input  class= "shadow-lg p-3 mb-5 bg-body rounded" type="text" id="name">
+                    <label class= "shadow-lg p-3 mb-5 bg-body rounded" for="age">Edad: </label>
+                    <input class= "shadow-lg p-3 mb-5 bg-body rounded" type="text" id="age">
+                    <label  class= "shadow-lg p-3 mb-5 bg-body rounded" for="genre">Genero: </label>
+                    <input class= "shadow-lg p-3 mb-5 bg-body rounded" type="text" id="genre">
+                    <label class= "shadow-lg p-3 mb-5 bg-body rounded" for="nationality">Nación: </label>
+                    <input class= "shadow-lg p-3 mb-5 bg-body rounded" type="text" id="nationality">
+                    <label class= "shadow-lg p-3 mb-5 bg-body rounded" for="profession">Profesión: </label>
+                    <input class= "shadow-lg p-3 mb-5 bg-body rounded" type="text" id="profession">
+                    <label class= "shadow-lg p-3 mb-5 bg-body rounded" for="id">Id: </label>
+                    <input class= "shadow-lg p-3 mb-5 bg-body rounded" type="text" id="id">
+                </div>
+                <div id ="botones">
+                    <button class= "shadow-lg p-3 mb-5 bg-body rounded" type="button" onclick="getPro()">Mostrar</button>
+                    <button  class= "shadow-lg p-3 mb-5 bg-body rounded" type="button" onclick="postPro()">Crear</button>
+                    <button class= "shadow-lg p-3 mb-5 bg-body rounded" type="button" onclick="putPro()">Actualizar</button>
+                    <button class= "shadow-lg p-3 mb-5 bg-body rounded" type="button" onclick="deletePro()">Eliminar</button>
+                </div>
             </form>
         </section>
         <section>
-            <table class="table" id="tabla">
-                <h1>Información sobre profesionales</h1>
+            <table class="table table-dark table-striped" id="tabla">
+                <h1 class= "shadow-lg p-3 mb-5 bg-body rounded">Información sobre profesionales</h1>
                 <thead>
                   <tr>
                     <th scope="col" id="nombre">Nombre</th>
@@ -46,7 +50,7 @@
                   </tr>
                 </thead>
               </table>
-              <button type ="button" onclick="eliminarInfo()">Eliminar Información</button>
+              <button class= "shadow-lg p-3 mb-5 bg-body rounded" type ="button" onclick="eliminarInfo()">Eliminar Información</button>
         </section>
     </main>
     <script src="./controladorAPI.js"></script>

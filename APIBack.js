@@ -2,9 +2,10 @@
 //Creación del servidor y uso de archivos JSON
 const express = require("express");
 const app = express();
+const cors = require("cors");
+
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
-const cors = require("cors");
 app.use(cors());
 
 //Import clase Professional
